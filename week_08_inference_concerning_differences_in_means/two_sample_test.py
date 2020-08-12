@@ -41,10 +41,9 @@ sp2= ( ((n1-1)*s1**2+(n2-1)*s2**2) / (n1 + n2 - 2) ) ** (1/2)
 t = (m1 - m2) / sp2 / ((1/n1 + 1/n2) ** (1/2))
 print(f"t-statistics={t}")
 
-# pValue in matlab#
+# % matlab version:
 # pValue = tcdf(t,n1+n2-2)
 
-# pValue in python#
 pValue = stats.t.sf(t,n1+n2-2)
 print(f"pValue={pValue}")
 
